@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miniproject/global_consts/Aimages.dart';
 import 'package:miniproject/global_consts/OgColours.dart';
 
 class Welcome extends StatelessWidget {
@@ -6,56 +7,96 @@ class Welcome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        backgroundColor: OgColors.primaryBg,
-        body: Column(
-          children: [
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: 33, left: 42),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              'Apki Eid ki kharidari sirf aik hi screen pr!',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 40,
+    return Scaffold(
+      backgroundColor: OgColors.primaryBg,
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 33, left: 42),
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      width: 335,
+                      height: 200,
+                      child: Text.rich(
+                        TextSpan(
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                          ),
+                          children: [
+                            TextSpan(
+                              text:
+                                  'Apki Eid ki kharidari sirf aik hi screen pr!    ',
+                            ),
+                            WidgetSpan(
+                              child: Image(
+                                image: AssetImage('Assets/Graphics/Emoji.png'),
                               ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 335,
+                      height: 200,
+                      child: Text(
+                        "There's something for everyone to enjoy with Sweet Favourites Screen 1",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Color(0xFFB2BBCE),
+                          fontSize: 23,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 335,
+                      height: 200,
+                      child: PageView(
+                        controller: PageController(),
+                        children: const [
+                          Center(
+                            child: Image(
+                              image: AssetImage(Aimages.placeholder),
+                            ),
+                          ),
+                          Center(
+                            child: Image(
+                              image: AssetImage(Aimages.placeholder),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        width: 335,
-                        height: 200,
-                        child: Text(
-                          "There's something for everyone to enjoy with Sweet Favourites Screen 1",
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Color(0xFFB2BBCE),
-                            fontSize: 23,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 200,
-                        height: 200,
-                        child: Image(
-                            image: AssetImage('Assets/Graphics/Emoji.png')),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            )
-          ],
-        ));
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 98.0),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: FloatingActionButton.extended(
+                onPressed: () {},
+                label: const Text(
+                  "Get Started",
+                  style: TextStyle(color: Colors.black),
+                ),
+                backgroundColor: OgColors.secondaryButton,
+                icon: const Icon(
+                  Icons.arrow_forward,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
