@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:miniproject/global_consts/Aimages.dart';
 import 'package:miniproject/global_consts/OgColours.dart';
+import 'package:miniproject/screens/home/home.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -29,7 +30,7 @@ class Welcome extends StatelessWidget {
                           children: [
                             TextSpan(
                               text:
-                                  'Apki Eid ki kharidari sirf aik hi screen pr!    ',
+                                  'YOur Holiday shopping delivered to screen One!    ',
                             ),
                             WidgetSpan(
                               child: Image(
@@ -82,7 +83,12 @@ class Welcome extends StatelessWidget {
             child: Align(
               alignment: Alignment.bottomCenter,
               child: FloatingActionButton.extended(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Home()),
+                  );
+                },
                 label: const Text(
                   "Get Started",
                   style: TextStyle(color: Colors.black),
