@@ -14,18 +14,22 @@ class _HomeState extends State<Home> {
     {
       'img': 'Assets/Graphics/placeholder.jpg',
       'title': 'Save 50% on last 3 orders.',
+      'colour': Color.fromARGB(255, 255, 175, 71),
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
       'title': 'Save 50% on last 3 orders.',
+      'colour': const Color.fromARGB(255, 242, 242, 242),
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
       'title': 'Save 50% on last 3 orders.',
+      'colour': const Color.fromARGB(255, 242, 242, 242),
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
       'title': 'Save 50% on last 3 orders.',
+      'colour': const Color.fromARGB(255, 242, 242, 242),
     },
   ];
   @override
@@ -95,23 +99,77 @@ class _HomeState extends State<Home> {
           ]),
         ),
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(18),
-        scrollDirection: Axis.horizontal,
-        itemCount: deals.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            height: 10,
-            width: 300,
-            color: Colors.orange,
-            child: Column(
-              children: [
-                Image(image: AssetImage('Assets/Graphics/placeholder.jpg')),
-                Text(deals[index]['title']),
-              ],
+      body: Column(
+        children: [
+          SizedBox(
+            height: 200,
+            child: ListView.builder(
+              padding: const EdgeInsets.all(18),
+              scrollDirection: Axis.horizontal,
+              itemCount: deals.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Container(
+                    padding: EdgeInsets.all(18),
+                    height: 10,
+                    width: 300,
+                    color: Colors.orange,
+                    child: Row(
+                      children: [
+                        Image(
+                            width: 120,
+                            image:
+                                AssetImage('Assets/Graphics/placeholder.jpg')),
+                        Expanded(child: Text(deals[index]['title'])),
+                      ],
+                    ),
+                  ),
+                );
+              },
             ),
-          );
-        },
+          ),
+          const Align(
+            alignment: Alignment.topLeft,
+            child: Expanded(
+              child: Text(
+                "Recommended",
+                style: TextStyle(
+                  fontSize: 36,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 300,
+            child: ListView.builder(
+              padding: const EdgeInsets.all(18),
+              scrollDirection: Axis.horizontal,
+              itemCount: deals.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Container(
+                    padding: EdgeInsets.all(18),
+                    height: 10,
+                    width: 150,
+                    color: Colors.orange,
+                    child: Column(
+                      children: [
+                        Image(
+                            width: 120,
+                            image:
+                                AssetImage('Assets/Graphics/placeholder.jpg')),
+                        Expanded(child: Text(deals[index]['title'])),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
