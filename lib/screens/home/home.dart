@@ -10,6 +10,24 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final TextEditingController _talash = TextEditingController();
+  final List deals = [
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Save 50% on last 3 orders.',
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Save 50% on last 3 orders.',
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Save 50% on last 3 orders.',
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Save 50% on last 3 orders.',
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,8 +95,23 @@ class _HomeState extends State<Home> {
           ]),
         ),
       ),
-      body: const Center(
-        child: Text("Home"),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(18),
+        scrollDirection: Axis.horizontal,
+        itemCount: deals.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            height: 10,
+            width: 300,
+            color: Colors.orange,
+            child: Column(
+              children: [
+                Image(image: AssetImage('Assets/Graphics/placeholder.jpg')),
+                Text(deals[index]['title']),
+              ],
+            ),
+          );
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
