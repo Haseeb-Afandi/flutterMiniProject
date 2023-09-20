@@ -99,7 +99,7 @@ class _CatState extends State<Cat> {
       appBar: AppBar(
         backgroundColor: OgColors.primaryBg,
         leading: const Padding(
-          padding: EdgeInsets.only(top: 15.0),
+          padding: EdgeInsets.only(left: 15.0, top: 15.0),
           child: Text(
             "Hey, Halal",
             style: TextStyle(fontSize: 32),
@@ -119,33 +119,38 @@ class _CatState extends State<Cat> {
           ),
         ],
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(100),
-          child: Column(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  child: const Text(
-                    "Shop",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
+          preferredSize: const Size.fromHeight(120),
+          child: Padding(
+            padding: const EdgeInsets.only(
+              left: 15.0,
+            ),
+            child: Column(children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    child: const Text(
+                      "Shop",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 18.0),
-              child: Text(
-                "By Category",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40,
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 18.0),
+                child: Text(
+                  "By Category",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40,
+                  ),
                 ),
               ),
-            ),
-          ]),
+            ]),
+          ),
         ),
       ),
       body: Column(
@@ -157,25 +162,24 @@ class _CatState extends State<Cat> {
               padding: const EdgeInsets.all(18),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
+                crossAxisSpacing: 15,
+                mainAxisSpacing: 15,
+                childAspectRatio: 2 / 2.3,
               ),
               itemCount: deals.length,
               itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Container(
-                    padding: EdgeInsets.all(18),
-                    height: 10,
-                    width: 100,
-                    color: Colors.orange,
-                    child: Row(
-                      children: [
-                        Image(
-                            width: 120,
-                            image:
-                                AssetImage('Assets/Graphics/placeholder.jpg')),
-                        Expanded(child: Text(deals[index]['title'])),
-                      ],
-                    ),
+                return Container(
+                  padding: EdgeInsets.all(18),
+                  height: 10,
+                  width: 120,
+                  color: Colors.orange,
+                  child: Column(
+                    children: [
+                      Image(
+                          width: 120,
+                          image: AssetImage('Assets/Graphics/placeholder.jpg')),
+                      Expanded(child: Text(deals[index]['title'])),
+                    ],
                   ),
                 );
               },
