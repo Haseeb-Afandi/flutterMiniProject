@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miniproject/screens/archive/productArchive.dart';
 
 import '../../global_consts/OgColours.dart';
 import '../home/home.dart';
@@ -190,12 +191,12 @@ class _CatInnerState extends State<CatInner> {
               ),
               itemCount: deals.length,
               itemBuilder: (BuildContext context, int index) {
-                return GestureDetector(
+                return InkWell(
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: ((context) => const Home()),
+                        builder: ((context) => const ProductArchive()),
                       ),
                     );
                   },
