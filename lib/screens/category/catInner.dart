@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:miniproject/screens/category/catInner.dart';
-import 'package:miniproject/screens/home/home.dart';
 
 import '../../global_consts/OgColours.dart';
+import '../home/home.dart';
+import 'cat.dart';
 
-class Cat extends StatefulWidget {
-  const Cat({super.key});
+class CatInner extends StatefulWidget {
+  const CatInner({super.key});
 
   @override
-  State<Cat> createState() => _CatState();
+  State<CatInner> createState() => _CatInnerState();
 }
 
-class _CatState extends State<Cat> {
+class _CatInnerState extends State<CatInner> {
   final int _bottomNavIndex = 1;
   final TextEditingController _talash = TextEditingController();
   final List deals = [
@@ -163,7 +163,7 @@ class _CatState extends State<Cat> {
             child: GridView.builder(
               padding: const EdgeInsets.all(18),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
+                crossAxisCount: 1,
                 crossAxisSpacing: 15,
                 mainAxisSpacing: 15,
                 childAspectRatio: 2 / 2.3,
@@ -175,7 +175,7 @@ class _CatState extends State<Cat> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: ((context) => const CatInner()),
+                        builder: ((context) => const Home()),
                       ),
                     );
                   },
