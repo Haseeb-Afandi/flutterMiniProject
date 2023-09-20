@@ -152,7 +152,7 @@ class _ProductArchiveState extends State<ProductArchive> {
               padding: const EdgeInsets.only(top: 5.0),
               child: GridView.builder(
                 padding: const EdgeInsets.all(18),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 15,
                   mainAxisSpacing: 15,
@@ -170,13 +170,13 @@ class _ProductArchiveState extends State<ProductArchive> {
                       );
                     },
                     child: Container(
-                      padding: EdgeInsets.all(18),
+                      padding: const EdgeInsets.all(18),
                       height: 10,
                       width: 120,
                       color: Colors.orange,
                       child: Column(
                         children: [
-                          Image(
+                          const Image(
                               width: 120,
                               image: AssetImage(
                                   'Assets/Graphics/placeholder.jpg')),
