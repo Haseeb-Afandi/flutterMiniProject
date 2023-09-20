@@ -158,7 +158,27 @@ class _CatInnerState extends State<CatInner> {
       body: Column(
         children: [
           SizedBox(
-            height: 570,
+            height: 80,
+            child: ListView.builder(
+              itemCount: deals.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.all(13.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    padding: const EdgeInsets.all(18),
+                    child: Text(deals[index]['title']),
+                  ),
+                );
+              },
+            ),
+          ),
+          SizedBox(
+            height: 490,
             width: 400,
             child: GridView.builder(
               padding: const EdgeInsets.all(18),
@@ -166,7 +186,7 @@ class _CatInnerState extends State<CatInner> {
                 crossAxisCount: 1,
                 crossAxisSpacing: 15,
                 mainAxisSpacing: 15,
-                childAspectRatio: 2 / 2.3,
+                childAspectRatio: 2 / 1.3,
               ),
               itemCount: deals.length,
               itemBuilder: (BuildContext context, int index) {
@@ -182,9 +202,9 @@ class _CatInnerState extends State<CatInner> {
                   child: Container(
                     padding: EdgeInsets.all(18),
                     height: 10,
-                    width: 120,
+                    width: 80,
                     color: Colors.orange,
-                    child: Column(
+                    child: Row(
                       children: [
                         Image(
                             width: 120,
