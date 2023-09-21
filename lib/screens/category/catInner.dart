@@ -8,7 +8,8 @@ import '../more/more.dart';
 import 'cat.dart';
 
 class CatInner extends StatefulWidget {
-  const CatInner({super.key});
+  final int productIndex;
+  const CatInner({super.key, required this.productIndex});
 
   @override
   State<CatInner> createState() => _CatInnerState();
@@ -500,7 +501,7 @@ class _CatInnerState extends State<CatInner> {
           SizedBox(
             height: 80,
             child: ListView.builder(
-              itemCount: deals.length,
+              itemCount: deals[widget.productIndex]['items'].length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
@@ -511,7 +512,8 @@ class _CatInnerState extends State<CatInner> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     padding: const EdgeInsets.all(18),
-                    child: Text(deals[index]['title']),
+                    child: Text(
+                        deals[widget.productIndex]['items'][index]['name']),
                   ),
                 );
               },
@@ -528,14 +530,16 @@ class _CatInnerState extends State<CatInner> {
                 mainAxisSpacing: 15,
                 childAspectRatio: 2 / 1.3,
               ),
-              itemCount: deals.length,
+              itemCount: deals[widget.productIndex]['items'].length,
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: ((context) => const ProductArchive()),
+                        builder: ((context) => ProductArchive(
+                              productIndex: widget.productIndex,
+                            )),
                       ),
                     );
                   },
@@ -557,7 +561,9 @@ class _CatInnerState extends State<CatInner> {
                           ),
                           child: Column(
                             children: [
-                              Expanded(child: Text(deals[index]['title'])),
+                              Expanded(
+                                  child: Text(deals[widget.productIndex]
+                                      ['items'][index]['name'])),
                             ],
                           ),
                         ),
