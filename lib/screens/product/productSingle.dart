@@ -15,6 +15,7 @@ class ProductSingle extends StatefulWidget {
 }
 
 class _ProductSingleState extends State<ProductSingle> {
+  final List MyCart = [];
   final List deals = [
     {
       'img': 'Assets/Graphics/placeholder.jpg',
@@ -433,12 +434,20 @@ class _ProductSingleState extends State<ProductSingle> {
             color: Colors.black,
           ),
         ),
-        actions: const [
+        actions: [
           Padding(
             padding: EdgeInsets.only(right: 18.0),
-            child: Icon(
-              Icons.shopping_cart,
-              color: Colors.black,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Cart(MyCart: MyCart)));
+              },
+              child: Icon(
+                Icons.shopping_cart,
+                color: Colors.black,
+              ),
             ),
           ),
         ],
@@ -510,12 +519,10 @@ class _ProductSingleState extends State<ProductSingle> {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: ((context) => const Cart()),
-                      ),
-                    );
+                    setState(() {
+                      MyCart.add(deals[widget.productIndex]['items']
+                          [widget.itemIndex]);
+                    });
                   },
                   child: Container(
                     padding: const EdgeInsets.only(
