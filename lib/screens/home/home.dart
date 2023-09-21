@@ -17,9 +17,9 @@ class _HomeState extends State<Home> {
   final TextEditingController _talash = TextEditingController();
   final List deals = [
     {
-      'img': 'Assets/Graphics/placeholder.jpg',
+      'img': 'Assets/Graphics/image2.jpg',
       'title': 'Save 50% on last 3 orders.',
-      'colour': Color.fromARGB(255, 255, 175, 71),
+      'colour': Color(0xfff9b023),
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
@@ -50,12 +50,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: OgColors.primaryBg,
+        backgroundColor: Color(0xffff2a4ba0),
         leading: const Padding(
-          padding: EdgeInsets.only(top: 15.0),
+          padding: EdgeInsets.only(top: 25.0),
           child: Text(
             "Hey, Halal",
-            style: TextStyle(fontSize: 32),
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
           ),
         ),
         leadingWidth: 200,
@@ -64,34 +64,39 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.only(top: 15.0),
             child: IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.shopping_cart_checkout)),
+                icon: const Icon(
+                  Icons.shopping_bag_outlined,
+                )),
           ),
         ],
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(140),
+          preferredSize: const Size.fromHeight(150),
           child: Column(children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 300,
-                  height: 50,
+                  width: 320,
+                  height: 60,
                   child: TextField(
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: Color(0xffff2a4ba0),
                     ),
                     controller: _talash,
                     decoration: InputDecoration(
                       iconColor: Colors.white,
-                      hintText: "Talash",
+                      hintStyle: TextStyle(
+                        color: Colors.white30,
+                      ),
                       prefixIcon: IconButton(
                         onPressed: () {
                           print("talash");
                         },
-                        icon: const Icon(Icons.search),
+                        icon: const Icon(Icons.search_rounded),
+                        color: Colors.white,
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+                        borderRadius: BorderRadius.circular(25.0),
                       ),
                     ),
                   ),
@@ -99,13 +104,13 @@ class _HomeState extends State<Home> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 18.0),
+              padding: const EdgeInsets.only(top: 15.0),
               child: Row(
                 children: [
                   Container(
                     width: 200,
                     height: 50,
-                    color: Colors.black,
+                    color: Color(0xff142f74),
                   )
                 ],
               ),
@@ -118,23 +123,23 @@ class _HomeState extends State<Home> {
           SizedBox(
             height: 200,
             child: ListView.builder(
-              padding: const EdgeInsets.all(18),
+              padding: const EdgeInsets.all(16),
               scrollDirection: Axis.horizontal,
               itemCount: deals.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Container(
-                    padding: EdgeInsets.all(18),
-                    height: 10,
-                    width: 300,
-                    color: Colors.orange,
+                    padding: EdgeInsets.all(16),
+                    height: 30,
+                    width: 280,
+                    color: Color(0xfff9b023),
                     child: Row(
                       children: [
                         Image(
-                            width: 120,
-                            image:
-                                AssetImage('Assets/Graphics/placeholder.jpg')),
+                          width: 90,
+                          image: AssetImage('Assets/Graphics/image2.jpg'),
+                        ),
                         Expanded(child: Text(deals[index]['title'])),
                       ],
                     ),
@@ -148,9 +153,7 @@ class _HomeState extends State<Home> {
             child: Expanded(
               child: Text(
                 "Recommended",
-                style: TextStyle(
-                  fontSize: 36,
-                ),
+                style: TextStyle(fontSize: 36, fontWeight: FontWeight.w400),
                 textAlign: TextAlign.start,
               ),
             ),
@@ -168,13 +171,12 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.all(18),
                     height: 10,
                     width: 150,
-                    color: Colors.orange,
+                    color: Color(0xfff9b023),
                     child: Column(
                       children: [
                         const Image(
                             width: 120,
-                            image:
-                                AssetImage('Assets/Graphics/placeholder.jpg')),
+                            image: AssetImage('Assets/Graphics/image3.jpg')),
                         Expanded(child: Text(deals[index]['title'])),
                       ],
                     ),
@@ -190,19 +192,20 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: "Home",
-              backgroundColor: Colors.green),
+              backgroundColor: Colors.grey),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.category),
               label: "Category",
-              backgroundColor: Colors.green),
+              backgroundColor: Colors.white),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.favorite_outline_sharp),
               label: "Favorite",
-              backgroundColor: Colors.green),
+              backgroundColor: Colors.white),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'More',
-              backgroundColor: Colors.green),
+            icon: Icon(Icons.more_vert),
+            label: 'More',
+            backgroundColor: Colors.white,
+          ),
         ],
         type: BottomNavigationBarType.shifting,
         currentIndex: _bottomNavIndex,

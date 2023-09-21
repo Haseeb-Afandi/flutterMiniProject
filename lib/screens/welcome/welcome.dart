@@ -9,7 +9,7 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: OgColors.primaryBg,
+      backgroundColor: Color(0xffff2a4ba0),
       body: Column(
         children: [
           Row(
@@ -30,7 +30,7 @@ class Welcome extends StatelessWidget {
                           children: [
                             TextSpan(
                               text:
-                                  'YOur Holiday shopping delivered to screen One!    ',
+                                  'Your Holiday shopping delivered to screen One   ',
                             ),
                             WidgetSpan(
                               child: Image(
@@ -93,7 +93,7 @@ class Welcome extends StatelessWidget {
                   "Get Started",
                   style: TextStyle(color: Colors.black),
                 ),
-                backgroundColor: OgColors.secondaryButton,
+                backgroundColor: Colors.white,
                 icon: const Icon(
                   Icons.arrow_forward,
                   color: Colors.black,
