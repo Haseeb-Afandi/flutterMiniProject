@@ -104,6 +104,7 @@ class _HomeState extends State<Home> {
                     ),
                     controller: _talash,
                     decoration: InputDecoration(
+                      fillColor: Colors.white,
                       iconColor: Colors.white,
                       hintText: "Talash",
                       prefixIcon: IconButton(

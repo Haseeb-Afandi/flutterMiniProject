@@ -22,71 +22,386 @@ class _CatInnerState extends State<CatInner> {
       'img': 'Assets/Graphics/placeholder.jpg',
       'title': 'Meats',
       'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Vegetables',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Home Appliances',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Detergents',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Cooking Essentials',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Car Care',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Electronics',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Games',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Self Care & Hygene',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Hardware',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Laptops',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Mobiles',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Watches',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Cleaning Tools',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
   ];
 
@@ -121,7 +436,9 @@ class _CatInnerState extends State<CatInner> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: OgColors.primaryBg,
         leading: const Padding(
           padding: EdgeInsets.only(left: 15.0, top: 15.0),
@@ -230,10 +547,20 @@ class _CatInnerState extends State<CatInner> {
                     child: Row(
                       children: [
                         Image(
-                            width: 120,
-                            image:
-                                AssetImage('Assets/Graphics/placeholder.jpg')),
-                        Expanded(child: Text(deals[index]['title'])),
+                          width: 120,
+                          image: AssetImage('Assets/Graphics/placeholder.jpg'),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 8.0,
+                            top: 20,
+                          ),
+                          child: Column(
+                            children: [
+                              Expanded(child: Text(deals[index]['title'])),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
