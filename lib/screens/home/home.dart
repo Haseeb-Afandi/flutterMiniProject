@@ -20,23 +20,23 @@ class _HomeState extends State<Home> {
   final List deals = [
     {
       'img': 'Assets/Graphics/image2.jpg',
-      'title': 'Save 50% on last 3 orders.',
-      'colour': Color(0xfff9b023),
+      'title': 'Fresh Lemon',
+      'description': 'Organic',
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Save 50% on last 3 orders.',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Green Tea',
+      'description': 'Organic',
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Save 50% on last 3 orders.',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Fresh Drink',
+      'description': 'Organic',
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Save 50% on last 3 orders.',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Lassi',
+      'description': 'Organic',
     },
   ];
 
@@ -75,15 +75,18 @@ class _HomeState extends State<Home> {
         backgroundColor: Color(0xffff2a4ba0),
         leading: const Padding(
           padding: EdgeInsets.only(top: 25.0),
-          child: Text(
-            "Hey, Halal",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+          child: Padding(
+            padding: EdgeInsets.only(left: 17),
+            child: Text(
+              "Hey, Halal",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+            ),
           ),
         ),
         leadingWidth: 200,
         actions: [
           Padding(
-            padding: const EdgeInsets.only(top: 15.0),
+            padding: const EdgeInsets.only(top: 18.0),
             child: IconButton(
                 onPressed: () {},
                 icon: const Icon(
@@ -98,8 +101,8 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 320,
-                  height: 60,
+                  width: 335,
+                  height: 56,
                   child: TextField(
                     style: const TextStyle(
                       color: Color(0xffff2a4ba0),
@@ -127,7 +130,7 @@ class _HomeState extends State<Home> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 15.0),
+              padding: const EdgeInsets.only(top: 18.0),
               child: Row(
                 children: [
                   Container(
@@ -151,19 +154,46 @@ class _HomeState extends State<Home> {
               itemCount: deals.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(18.0),
                   child: Container(
                     padding: EdgeInsets.all(16),
-                    height: 30,
-                    width: 280,
-                    color: Color(0xfff9b023),
-                    child: Row(
+                    width: 269,
+                    height: 123,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff9b023),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: const Row(
                       children: [
                         Image(
                           width: 90,
                           image: AssetImage('Assets/Graphics/image2.jpg'),
                         ),
-                        Expanded(child: Text(deals[index]['title'])),
+                        Expanded(
+                          child: Text.rich(
+                            TextSpan(
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: 'Get           ',
+                                ),
+                                TextSpan(
+                                  text: '50% off   ',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 40),
+                                ),
+                                TextSpan(
+                                  text: 'On first 03 Order',
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -174,10 +204,13 @@ class _HomeState extends State<Home> {
           const Align(
             alignment: Alignment.topLeft,
             child: Expanded(
-              child: Text(
-                "Recommended",
-                style: TextStyle(fontSize: 36, fontWeight: FontWeight.w400),
-                textAlign: TextAlign.start,
+              child: Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  "Recommended",
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
+                  textAlign: TextAlign.start,
+                ),
               ),
             ),
           ),
@@ -189,18 +222,35 @@ class _HomeState extends State<Home> {
               itemCount: deals.length,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.all(12),
                   child: Container(
-                    padding: const EdgeInsets.all(18),
-                    height: 10,
-                    width: 150,
-                    color: Color(0xfff9b023),
+                    padding: const EdgeInsets.all(12),
+                    height: 194,
+                    width: 128,
+                    decoration: BoxDecoration(
+                        color: Color(0XFFFF8F9FB),
+                        borderRadius: BorderRadius.circular(12)),
                     child: Column(
                       children: [
                         const Image(
                             width: 120,
                             image: AssetImage('Assets/Graphics/image3.jpg')),
-                        Expanded(child: Text(deals[index]['title'])),
+                        Expanded(
+                          child: Text(
+                            deals[index]["title"],
+                            style: TextStyle(
+                                height: 3,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            deals[index]["description"],
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w400),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -211,23 +261,37 @@ class _HomeState extends State<Home> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Home",
-              backgroundColor: Colors.grey),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.category),
-              label: "Category",
-              backgroundColor: Colors.white),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_outline_sharp),
-              label: "Favorite",
-              backgroundColor: Colors.white),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.more_vert),
-            label: 'More',
+            icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
+            label: "Home",
             backgroundColor: Colors.white,
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.category,
+                color: Colors.black,
+              ),
+              label: "Category",
+              backgroundColor: Colors.black),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.favorite_outline_sharp,
+                color: Colors.black,
+              ),
+              label: "Favorite",
+              backgroundColor: Colors.black),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.more_vert,
+              color: Colors.black,
+            ),
+            label: 'More',
+            backgroundColor: Colors.black,
           ),
         ],
         type: BottomNavigationBarType.shifting,

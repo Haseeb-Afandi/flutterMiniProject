@@ -223,23 +223,37 @@ class _CatState extends State<Cat> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Home",
-              backgroundColor: Colors.green),
+            icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
+            label: "Home",
+            backgroundColor: Colors.white,
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Category",
-              backgroundColor: Colors.green),
+            icon: Icon(
+              Icons.category,
+              color: Colors.black,
+            ),
+            label: "Category",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Favorite",
-              backgroundColor: Colors.green),
+            icon: Icon(
+              Icons.favorite_outline_sharp,
+              color: Colors.black,
+            ),
+            label: "Favorite",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'More',
-              backgroundColor: Colors.green),
+            icon: Icon(
+              Icons.more_vert,
+              color: Colors.black,
+            ),
+            label: 'More',
+          ),
         ],
         type: BottomNavigationBarType.shifting,
         currentIndex: _bottomNavIndex,
