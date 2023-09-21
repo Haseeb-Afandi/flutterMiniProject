@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:miniproject/global_consts/OgColours.dart';
+import 'package:miniproject/screens/favorites/favorites.dart';
+import 'package:miniproject/screens/more/more.dart';
 import 'package:miniproject/screens/welcome/welcome.dart';
 
 import '../category/cat.dart';
@@ -39,11 +41,31 @@ class _HomeState extends State<Home> {
   ];
 
   void bottomNavTap(index) {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const Cat(),
-        ));
+    if (index == 1) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Cat(),
+          ));
+    } else if (index == 2) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Favorites(),
+          ));
+    } else if (index == 3) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const More(),
+          ));
+    } else if (index == 0) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Home(),
+          ));
+    }
   }
 
   @override

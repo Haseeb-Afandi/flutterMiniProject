@@ -94,9 +94,14 @@ class _CartState extends State<Cart> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(50),
             ),
-            child: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: const Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+              ),
             ),
           ),
         ),
