@@ -62,6 +62,7 @@ flutter:
   assets:
     - Assets/Graphics/Emoji.png
     - Assets/Graphics/placeholder.jpg
+    - Assets/Graphics/hash.jpg
     - Assets/Graphics/image2.jpg
     - Assets/Graphics/image3.jpg
 

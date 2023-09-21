@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniproject/global_consts/OgColours.dart';
+import 'package:miniproject/screens/cart/cart.dart';
 
 import '../../global_consts/Aimages.dart';
 
@@ -54,16 +55,16 @@ class _ProductSingleState extends State<ProductSingle> {
       ),
       body: Column(
         children: [
-          Align(
+          const Align(
             alignment: Alignment.center,
-            child: const SizedBox(
+            child: SizedBox(
               height: 250,
               child: Image(
                 image: AssetImage(Aimages.placeholder),
               ),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(
               left: 20,
               top: 10,
@@ -73,7 +74,7 @@ class _ProductSingleState extends State<ProductSingle> {
               child: Text("Product"),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -86,7 +87,7 @@ class _ProductSingleState extends State<ProductSingle> {
               ],
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(20),
             child: Row(
               children: [
@@ -112,15 +113,25 @@ class _ProductSingleState extends State<ProductSingle> {
             padding: EdgeInsets.all(20),
             child: Row(
               children: [
-                Container(
-                  padding:
-                      EdgeInsets.only(top: 20, bottom: 20, left: 40, right: 40),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: OgColors.primaryBg,
-                      )),
-                  child: Text("Add To Cart"),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: ((context) => const Cart()),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.only(
+                        top: 20, bottom: 20, left: 40, right: 40),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(
+                          color: OgColors.primaryBg,
+                        )),
+                    child: Text("Add To Cart"),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 18.0),

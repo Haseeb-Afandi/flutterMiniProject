@@ -84,19 +84,25 @@ class _ProductArchiveState extends State<ProductArchive> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            color: const Color.fromARGB(255, 223, 222, 222),
-          ),
-          child: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: const Icon(
-              Icons.arrow_back,
-              color: Colors.black,
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 18.0, top: 10, bottom: 10),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+              color: Color.fromARGB(255, 245, 245, 245),
+            ),
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: const Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+              ),
             ),
           ),
         ),
@@ -173,14 +179,42 @@ class _ProductArchiveState extends State<ProductArchive> {
                       padding: const EdgeInsets.all(18),
                       height: 10,
                       width: 120,
-                      color: Colors.orange,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 245, 245, 245),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                       child: Column(
                         children: [
                           const Image(
-                              width: 120,
-                              image: AssetImage(
-                                  'Assets/Graphics/placeholder.jpg')),
-                          Expanded(child: Text(deals[index]['title'])),
+                            width: 120,
+                            image:
+                                AssetImage('Assets/Graphics/placeholder.jpg'),
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 18.0, top: 10, bottom: 10),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: const Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                deals[index]['title'],
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),

@@ -3,6 +3,8 @@ import 'package:miniproject/screens/category/catInner.dart';
 import 'package:miniproject/screens/home/home.dart';
 
 import '../../global_consts/OgColours.dart';
+import '../favorites/favorites.dart';
+import '../more/more.dart';
 
 class Cat extends StatefulWidget {
   const Cat({super.key});
@@ -88,11 +90,31 @@ class _CatState extends State<Cat> {
   ];
 
   void bottomNavTap(index) {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const Cat(),
-        ));
+    if (index == 1) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Cat(),
+          ));
+    } else if (index == 2) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Favorites(),
+          ));
+    } else if (index == 3) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const More(),
+          ));
+    } else if (index == 0) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Home(),
+          ));
+    }
   }
 
   @override

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:miniproject/screens/archive/productArchive.dart';
 
 import '../../global_consts/OgColours.dart';
+import '../favorites/favorites.dart';
 import '../home/home.dart';
+import '../more/more.dart';
 import 'cat.dart';
 
 class CatInner extends StatefulWidget {
@@ -89,11 +91,31 @@ class _CatInnerState extends State<CatInner> {
   ];
 
   void bottomNavTap(index) {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const Cat(),
-        ));
+    if (index == 1) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Cat(),
+          ));
+    } else if (index == 2) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Favorites(),
+          ));
+    } else if (index == 3) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const More(),
+          ));
+    } else if (index == 0) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Home(),
+          ));
+    }
   }
 
   @override
