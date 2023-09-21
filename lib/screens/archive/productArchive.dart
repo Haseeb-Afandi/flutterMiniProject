@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:miniproject/screens/product/productSingle.dart';
 
 class ProductArchive extends StatefulWidget {
-  const ProductArchive({super.key});
+  final int productIndex;
+  const ProductArchive({super.key, required this.productIndex});
 
   @override
   State<ProductArchive> createState() => _ProductArchiveState();
@@ -14,71 +15,386 @@ class _ProductArchiveState extends State<ProductArchive> {
       'img': 'Assets/Graphics/placeholder.jpg',
       'title': 'Meats',
       'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Vegetables',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Home Appliances',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Detergents',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Cooking Essentials',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Car Care',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
     {
       'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Electronics',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Games',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Self Care & Hygene',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Hardware',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Laptops',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Mobiles',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Watches',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
-    },
-    {
-      'img': 'Assets/Graphics/placeholder.jpg',
-      'title': 'Cleaning Tools',
-      'colour': const Color.fromARGB(255, 242, 242, 242),
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
     },
   ];
   @override
@@ -164,14 +480,17 @@ class _ProductArchiveState extends State<ProductArchive> {
                   mainAxisSpacing: 15,
                   childAspectRatio: 2 / 2.3,
                 ),
-                itemCount: deals.length,
+                itemCount: deals[widget.productIndex]['items'].length,
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: ((context) => const ProductSingle()),
+                          builder: ((context) => ProductSingle(
+                                productIndex: widget.productIndex,
+                                itemIndex: index,
+                              )),
                         ),
                       );
                     },
@@ -211,7 +530,8 @@ class _ProductArchiveState extends State<ProductArchive> {
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                deals[index]['title'],
+                                deals[widget.productIndex]['items'][index]
+                                    ['name'],
                               ),
                             ),
                           ),

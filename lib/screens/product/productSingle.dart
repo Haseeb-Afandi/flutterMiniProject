@@ -5,13 +5,404 @@ import 'package:miniproject/screens/cart/cart.dart';
 import '../../global_consts/Aimages.dart';
 
 class ProductSingle extends StatefulWidget {
-  const ProductSingle({super.key});
+  final int productIndex;
+  final int itemIndex;
+  const ProductSingle(
+      {super.key, required this.productIndex, required this.itemIndex});
 
   @override
   State<ProductSingle> createState() => _ProductSingleState();
 }
 
 class _ProductSingleState extends State<ProductSingle> {
+  final List MyCart = [];
+  final List deals = [
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
+    },
+    {
+      'img': 'Assets/Graphics/placeholder.jpg',
+      'title': 'Meats',
+      'colour': Color.fromARGB(255, 255, 175, 71),
+      'items': [
+        {
+          'name': 'Ribs',
+          'quantity': '2',
+          'price': 22,
+          'id': 0,
+        },
+        {
+          'name': 'Bone',
+          'quantity': '2',
+          'price': 22,
+          'id': 1,
+        },
+        {
+          'name': 'Chest',
+          'quantity': '2',
+          'price': 22,
+          'id': 2,
+        },
+        {
+          'name': 'Leg',
+          'quantity': '2',
+          'price': 22,
+          'id': 3,
+        },
+        {
+          'name': 'Mince Meat',
+          'quantity': '2',
+          'price': 22,
+          'id': 4,
+        },
+        {
+          'name': 'Liver',
+          'quantity': '2',
+          'price': 22,
+          'id': 5,
+        },
+        {
+          'name': 'Heart',
+          'quantity': '2',
+          'price': 22,
+          'id': 6,
+        },
+        {
+          'name': 'Wagyu',
+          'quantity': '2',
+          'price': 22,
+          'id': 7,
+        },
+      ],
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,18 +428,26 @@ class _ProductSingleState extends State<ProductSingle> {
             ),
           ),
         ),
-        title: const Text(
-          "Product Page",
+        title: Text(
+          deals[widget.productIndex]['items'][widget.itemIndex]['name'],
           style: TextStyle(
             color: Colors.black,
           ),
         ),
-        actions: const [
+        actions: [
           Padding(
             padding: EdgeInsets.only(right: 18.0),
-            child: Icon(
-              Icons.shopping_cart,
-              color: Colors.black,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Cart(MyCart: MyCart)));
+              },
+              child: Icon(
+                Icons.shopping_cart,
+                color: Colors.black,
+              ),
             ),
           ),
         ],
@@ -64,23 +463,28 @@ class _ProductSingleState extends State<ProductSingle> {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(
+          Padding(
+            padding: const EdgeInsets.only(
               left: 20,
               top: 10,
             ),
             child: Align(
               alignment: Alignment.topLeft,
-              child: Text("Product"),
+              child: Text(
+                deals[widget.productIndex]['items'][widget.itemIndex]['name'],
+              ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.all(20),
+          Padding(
+            padding: const EdgeInsets.all(20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("Price"),
-                Padding(
+                Text(
+                  deals[widget.productIndex]['items'][widget.itemIndex]['price']
+                      .toString(),
+                ),
+                const Padding(
                   padding: EdgeInsets.only(left: 30),
                   child: Text("discount"),
                 ),
@@ -115,12 +519,10 @@ class _ProductSingleState extends State<ProductSingle> {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: ((context) => const Cart()),
-                      ),
-                    );
+                    setState(() {
+                      MyCart.add(deals[widget.productIndex]['items']
+                          [widget.itemIndex]);
+                    });
                   },
                   child: Container(
                     padding: const EdgeInsets.only(

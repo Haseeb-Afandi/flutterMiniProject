@@ -3,7 +3,8 @@ import 'package:miniproject/global_consts/Aimages.dart';
 import 'package:miniproject/global_consts/OgColours.dart';
 
 class Cart extends StatefulWidget {
-  const Cart({super.key});
+  final List MyCart;
+  const Cart({super.key, required this.MyCart});
 
   @override
   State<Cart> createState() => _CartState();
@@ -173,7 +174,7 @@ class _CartState extends State<Cart> {
               height: 350,
               color: Colors.white,
               child: ListView.builder(
-                itemCount: deals.length,
+                itemCount: widget.MyCart.length,
                 padding: EdgeInsets.all(0),
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
