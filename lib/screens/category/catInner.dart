@@ -547,7 +547,10 @@ class _CatInnerState extends State<CatInner> {
                     padding: EdgeInsets.all(18),
                     height: 10,
                     width: 80,
-                    color: Colors.orange,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 245, 245, 245),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                     child: Row(
                       children: [
                         Image(
